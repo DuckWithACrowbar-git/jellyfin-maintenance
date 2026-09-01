@@ -12,8 +12,11 @@
 <body>
     <h1 class="main-title">Jellyfin is under maintenance!</h1>
     <h2 class="text">Hopefully it will be back on Sep. 7</h2>
-    <h2 class="text">Thank you for your patience.</h2>
-    <div clas="maxwell"><img src="maxwell.gif"></div>
+    <h2 class="text long">Thank you for your patience while I make sure Jellyfin is in optimal condition :D</h2>
+    <div class="maxwell-div">
+        <h3>Meanwhile, here is Maxwell:</h3>
+        <img src="maxwell.gif">
+    </div>
 </body>
 </html>
 <style>
@@ -29,15 +32,21 @@
         padding-top: 20px;
     }
 
-    h1, h2{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .long{
+        transform: scale(90%);
     }
 
-    .maxwell{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    h1, h2{
+        display: grid;
+        place-items: center;
+    }
+
+    h2{
+        transform: scale(110%);
+    }
+
+    .maxwell-div{
+        display: grid;
+        place-items: center;
     }
 </style>
