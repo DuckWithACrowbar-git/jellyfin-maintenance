@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Jellyfin is under maintenance</title>
+    <title>Jellyfin is under maintenance!</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -11,11 +11,11 @@
 </head>
 <body>
     <h1 class="main-title">Jellyfin is under maintenance!</h1>
-    <h2 class="text">Hopefully it will be back on Sep. 7</h2>
+    <h2 class="text">Expected to be back on Sep. 7</h2>
     <h2 class="text long">Thank you for your patience while I make sure Jellyfin is in optimal condition :D</h2>
     <div class="maxwell-div">
         <h3>Meanwhile, here is Maxwell:</h3>
-        <img src="maxwell.gif">
+        <img src="{{ url_for('static', filename='maxwell.gif') }}">
     </div>
 </body>
 </html>
@@ -41,11 +41,8 @@
         place-items: center;
     }
 
-    h2{
-        transform: scale(110%);
-    }
-
     .maxwell-div{
+        padding-top: 30px;
         display: grid;
         place-items: center;
     }

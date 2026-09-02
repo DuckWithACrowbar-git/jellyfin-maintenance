@@ -5,7 +5,6 @@ app = Flask(__name__)
 
 @app.route("/", defaults={"path": ""})
 @app.route("/<path:path>")
-code = render_template("index.html")
 
 
 def catch_all(path):
@@ -13,4 +12,4 @@ def catch_all(path):
 
 
 if __name__ == "__main__":
-  app.run(debug=True)
+  app.run(debug=False, host="0.0.0.0", port=9000)
