@@ -15,7 +15,7 @@
     <h2 class="text long">Thank you for your patience while I make sure Jellyfin is in optimal condition :D</h2>
     <div class="maxwell-div">
         <h3>Meanwhile, here is Maxwell:</h3>
-        <img src="{{ url_for('static', filename='maxwell.gif') }}">
+        <img class="maxwell-img" src="{{ url_for('static', filename='maxwell.gif') }}">
     </div>
 </body>
 </html>
@@ -46,4 +46,10 @@
         display: grid;
         place-items: center;
     }
+    
+    .maxwell-img{
+        width: 350px;
+        height: auto;
+    }
+    
 </style>
