@@ -11,12 +11,13 @@
 </head>
 <body>
     <h1 class="main-title">Jellyfin is under maintenance!</h1>
-    <h2 class="text">Expected to be back on Sep. 7</h2>
+    <h2 class="text">Expected to be back on Sep. 7</h2> <!--idea: make sep 7 a dynamic date for future maintenance-->
     <h2 class="text long">Thank you for your patience while I make sure Jellyfin is in optimal condition :D</h2>
     <div class="maxwell-div">
         <h3>Meanwhile, here is Maxwell:</h3>
         <img class="maxwell-img" src="{{ url_for('static', filename='maxwell.gif') }}">
     </div>
+    <p class="bottom-text">yo this duck guy has no skill with this 🤣</p>
 </body>
 </html>
 <style>
@@ -39,6 +40,10 @@
     h1, h2{
         display: grid;
         place-items: center;
+    }
+    .bottom-text{
+        place-items: bottom;
+        opacity:0.3;
     }
 
     .maxwell-div{
