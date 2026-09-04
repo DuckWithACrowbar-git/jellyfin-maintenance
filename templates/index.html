@@ -8,16 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
 </head>
 <body>
-    <h1 class="main-title">Jellyfin is under maintenance!</h1>
-    <h2 class="text">Expected to be back on Sep. 7</h2> <!--idea: make sep 7 a dynamic date for future maintenance-->
-    <h2 class="text long">Thank you for your patience while I make sure Jellyfin is in optimal condition :D</h2>
+    <h1 class="main-title center">Jellyfin is under maintenance!</h1>
+    <h2 class="text center">Maintenance will be from {{start_date}} to {{end_date}}</h2>
+    <h2 class="text long center">Thank you for your patience while I make sure Jellyfin is in optimal condition :D</h2>
     <div class="maxwell-div">
         <h3>Meanwhile, here is Maxwell:</h3>
         <img class="maxwell-img" src="{{ url_for('static', filename='maxwell.gif') }}">
     </div>
-    <p class="bottom-text">yo this duck guy has no skill with this 🤣</p>
+    <p class="bottom-text center">yo this duck guy has no skill with this 🤣 -mmanzan</p>
 </body>
 </html>
 <style>
@@ -37,15 +38,11 @@
         transform: scale(90%);
     }
 
-    h1, h2{
+    .center{
         display: grid;
         place-items: center;
     }
-    .bottom-text{
-        place-items: bottom;
-        opacity:0.3;
-    }
-
+    
     .maxwell-div{
         padding-top: 30px;
         display: grid;
@@ -57,4 +54,8 @@
         height: auto;
     }
     
+    .bottom-text{
+        place-items: bottom;
+        opacity: 0.07;
+    }
 </style>
