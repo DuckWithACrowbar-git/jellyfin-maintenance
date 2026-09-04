@@ -20,6 +20,13 @@
         <h3>Meanwhile, here is Maxwell:</h3>
         <img class="maxwell-img" src="{{ url_for('static', filename='maxwell.gif') }}">
     </div>
+    <div class="borders">
+        <div class="bounce-horizontal">
+            <div class="bounce-vertical">
+                <div class="rotate-maintenance"></div>
+            </div>
+        </div>
+    </div>
     <p class="bottom-text center">yo this duck guy has no skill with this 🤣 -mmanzan</p>
 </body>
 </html>
@@ -34,6 +41,8 @@
 
     body{
         padding-top: 20px;
+
+
     }
 
     .long{
@@ -55,10 +64,12 @@
         width: 350px;
         height: auto;
     }
+
     .jellyfin-logo{
-        display:flex;
-        align-items:center;
-        justify-content:center;
+        display:block;
+        margin-top:0px;
+        margin-left:auto;
+        margin-right:auto;
         width: 100px;
         height: auto;
     }
@@ -68,6 +79,95 @@
         align-items:flex-end;
         justify-content:center;
         place-items: bottom;
-        opacity: 0.07;
+        opacity: 0.067;
     }
+
+    body, html{
+        margin:0;
+        padding:0;
+        overflow:hidden;
+        background-color: black;
+    }
+
+    .borders{
+        position:fixed;
+        top:0;
+        left:0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 99999;
+    }
+
+    .maintenance-man{
+        height: 200px;
+        width: 200px;
+        background-size:cover;
+        background-position:center;
+    }
+
+
+    .bounce-horizontal{
+        position:absolute;
+        top:0;
+        left:0;
+
+        animation: moveX 5.43656365s linear infinite alternate;
+    }
+
+    .bounce-vertical{
+        width:200px;
+        height:200px;
+        background-size:contain;
+        background-position:center;
+        background-repeat:no-repeat;
+
+        animation: moveY 3.1415926s linear infinite alternate
+    }
+
+    .rotate-maintenance{
+        width:100%;
+        height:100%;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        animation: rotate 20s linear infinite, switchFrames 2s steps(1) infinite;;
+    }
+    
+    @keyframes moveX{
+        from {
+            transform: translateX(0px);
+        }
+        to {
+            transform: translateX(calc(100vw - 200px));
+        }
+    }
+    
+    @keyframes moveY{
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(calc(100vh - 200px));
+        }
+    }
+
+    @keyframes switchFrames{
+        0%,100%{
+            background-image: url("{{ url_for('static', filename='maintenance-man-frame-one.png') }}");
+        }
+        50%{
+            background-image: url("{{ url_for('static', filename='maintenance-man-frame-two.png') }}");
+        }
+    }
+
+    @keyframes rotate{
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
 </style>
