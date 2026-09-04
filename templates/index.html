@@ -11,6 +11,8 @@
     <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
 </head>
 <body>
+    <img class="jellyfin-logo" src="{{ url_for('static', filename='jellyfin.webp') }}"  alt="Jellyfin Logo" type="image/webp" >
+    <br>
     <h1 class="main-title center">Jellyfin is under maintenance!</h1>
     <h2 class="text center">Maintenance will be from {{start_date}} to {{end_date}}</h2>
     <h2 class="text long center">Thank you for your patience while I make sure Jellyfin is in optimal condition :D</h2>
@@ -51,6 +53,13 @@
     
     .maxwell-img{
         width: 350px;
+        height: auto;
+    }
+    .jellyfin-logo{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width: 100px;
         height: auto;
     }
     
