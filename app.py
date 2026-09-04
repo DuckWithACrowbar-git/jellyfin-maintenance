@@ -9,7 +9,7 @@ import math as m
 app = Flask(__name__)
 
 #Change these variables for other maintenance times, leave others as is. (Thanks Mateo, you're the GOAT!)
-scheduled_start_date = '{"year": "2026", "month": "09", "day": "04", "hour": "17", "minute": "00", "second": "00"}'
+scheduled_start_date = '{"year": "2026", "month": "09", "day": "04", "hour": "21", "minute": "30", "second": "00"}'
 scheduled_end_date = '{"year": "2026", "month": "09", "day": "07", "hour": "17", "minute": "00", "second": "00"}'
 
 
